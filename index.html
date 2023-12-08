@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://cdn.coingate.com/cg-js/v1/cg.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: white;
+            border-radius: 3px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #434343;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background-color: beige;
+        }
+
+        body {
+            margin: 0;
+            background-color: white; /* Set body background color to white */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .centerr {
+            background: rgb(222, 222, 166);
+            padding-left: 80px;
+            border-radius: 15px 50px 30px;
+            padding-right: 80px;
+            padding-top: 40px;
+        }
+
+        .center {
+            background: #a8ef01;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgb(186, 186, 111);
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box; 
+            text-align: left; 
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 10px;
+            color: #915EFF; 
+        }
+
+        .add-to-cart-icon {
+            font-size: 24px;
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+            color: #34495e;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            background-color: #ccc7c7;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 0;
+        }
+
+        #subscribe {
+            margin-right: 8px;
+        }
+
+        #price {
+            width: calc(100% - 16px);
+        }
+
+        #paypal-button-container {
+            margin-top: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 0;
+        }
+
+        #subscribe {
+            margin-right: 0; 
+            width: 100%; 
+            margin-bottom: 16px;
+        }
+
+        .flex-item {
+            flex: 0 0 48%;
+        }
+
+        @media screen and (max-width: 600px) {
+            .centerr{
+                background: rgb(236, 236, 150);
+                padding-left: 80px;
+                padding-right: 80px;
+                padding-top: 40px;
+            }
+            .center {
+                width: 100%;
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 24px; 
+                padding: 0 10px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .flex-item {
+                width: 100%;
+            }
+
+            p {
+                font-size: 18px; 
+            }
+        }
+
+        .success-message {
+            color: #2ecc71;
+            font-size: 18px;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .continue-shopping-button {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .continue-shopping-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <title>palt-iptv</title>
+</head>
+<body>
+    <div class="container"> <!-- Added a container div -->
+        <div class="centerr">
+            <h1>Welcome Again</h1>
+            <span class="add-to-cart-icon">&#128722;</span>
+            <div class="center">
+                <p>Thank you for choosing palt-iptv! We sincerely appreciate your trust in our service. Your recent purchase means a lot to us, and we are committed to ensuring you have a fantastic entertainment experience. 
+                    If you ever need assistance or have questions, our team is here for you. We look forward to serving you and providing the best IPTV experience possible. Enjoy your entertainment journey with palt-iptv!</p>
+            </div>
+            <h1>Thank you for your Purchase</h1>
+            <div class="flex-item">
+                <a href="https://palt-iptv.com/" class="continue-shopping-button" onclick="showSuccessMessage()">Continue Shopping</a>
+                <p class="success-message" id="successMessage"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSuccessMessage() {
+            document.getElementById("successMessage").innerText = "Success! Your purchase is complete.";
+        }
+    </script>
+</body>
+</html>
